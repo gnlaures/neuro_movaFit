@@ -1,0 +1,101 @@
+// Layout Colors
+$primaryLight: #da5129;
+$primary: #c8421b;
+$primaryDark: #b23510;
+
+$secondaryLight: #201e1b;
+$secondary: #16130f;
+$secondaryDark: #000;
+
+$white: #fff;
+$white2: #f8f8f8;
+$white3: #f4f4f4;
+
+$mutedGray: #ededed;
+$lightGray: #e7e7e7;
+$mediumGray: #c5c5c5;
+$darkGray: #4c4c4c;
+$baseGray: #898989;
+
+$defaultRadius: 5px;
+
+$feedbackSuccess: #1ca33d;
+$feedbackLoad: #eee;
+$feedbackError: #f05555;
+
+$whatsappPrimary: #25d366;
+$whatsappSecondary: #1eb456;
+
+// Sizes
+$containerWidth: 1200px;
+$containerBigWidth: 1440px;
+$maxRowWidth: 1920px;
+
+// media folders
+$media_assets : "../../media/img/assets/";
+$media_icons : "../../media/img/icons/";
+$media_content : "../../media/img/content/";
+//example: background: url(#{$media_assets}image.png);
+
+// type
+@font-face {
+	font-family: 'Avenir';
+	src: url('../../media/type/AvenirLTPro-Roman.woff2') format('woff2'),
+	url('../../media/type/AvenirLTPro-Roman.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Avenir';
+	src: url('../../media/type/AvenirLTPro-Medium.woff2') format('woff2'),
+	url('../../media/type/AvenirLTPro-Medium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Avenir';
+	src: url('../../media/type/AvenirLTPro-Heavy.woff2') format('woff2'),
+	url('../../media/type/AvenirLTPro-Heavy.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Avenir';
+	src: url('../../media/type/AvenirLTPro-Light.woff2') format('woff2'),
+	url('../../media/type/AvenirLTPro-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Avenir';
+	src: url('../../media/type/AvenirLTPro-Black.woff2') format('woff2'),
+	url('../../media/type/AvenirLTPro-Black.woff') format('woff');
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Avenir';
+	src: url('../../media/type/AvenirLTPro-Book.woff2') format('woff2'),
+	url('../../media/type/AvenirLTPro-Book.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+// text
+$text: #fff;
+$placeholderText: lighten($text, 15%);
+$fontFamily__default: 'Avenir', 'Roboto', 'Calibri', sans-serif;
+$fwLight: 300;
+$fwBook: 400;
+$fwRoman: normal;
+$fwMedium: 500;
+$fwHeavy: bold;
+$fwBlack: 900;
+$fwBold: $fwHeavy;
+$fwRegular: $fwRoman;

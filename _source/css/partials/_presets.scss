@@ -1,0 +1,75 @@
+@mixin paragrafos($tc: $text, $fw: $fwRoman, $fs: 18px, $lh: 1.3, $mb: 20px, $mbLOT: 0) {
+    color: $tc;
+    font-size: $fs;
+    font-weight: $fw;
+    margin-bottom: $mb;
+    line-height: $lh;
+    &:last-of-type {
+        margin-bottom: $mbLOT;
+    }
+    a {
+        color: $tc;
+        font-size: $fs;
+        font-weight: $fw;
+        line-height: $lh;
+        text-decoration: underline;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    strong {
+        font-weight: bold;
+        color: $tc;
+        font-size: $fs;
+        line-height: $lh;
+    }
+    @media screen and (max-width: 430px) {
+        font-size: $fs - 2;
+        a, strong {
+            font-size: $fs - 2;
+        }
+    }
+}
+
+@mixin title_h1() {
+    display: block;
+    line-height: 1;
+    span {
+        display: inline-block;
+        background: $primary;
+        padding: 5px 10px;
+        color: $white;
+        line-height: 1;
+        text-transform: uppercase;
+        font-size: 48px;
+        font-weight: $fwRegular;
+        strong {
+            font-weight: $fwBlack;
+            line-height: 0.9;
+        }
+    }
+}
+@mixin title_h1_sections() {
+    display: block;
+    font-weight: $fwHeavy;
+    font-size: 44px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    color: $white;
+}
+@mixin title_h2_sections() {
+    display: block;
+    line-height: 1;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: $white;
+    max-width: 320px;
+    margin-bottom: 15px;
+}
+@mixin spacerList($bg: $primaryDark) {
+    display: block;
+    width: 100%;
+    max-width: 100px;
+    height: 1px;
+    background: $bg;
+}

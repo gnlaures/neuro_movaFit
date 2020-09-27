@@ -1,0 +1,464 @@
+// l-nav
+@media screen and (max-width: 920px) {
+    .l-nav {
+        &__contentHero {
+            @include transition();
+            overflow-x: hidden;
+            overflow-y: auto;
+            display: block;
+            background: $secondary;
+            height: 100vh;
+            position: fixed;
+            right: -300px;
+            top: 0;
+            width: 260px;
+            max-width: 100%;
+            padding-bottom: 70px;
+            &.is-active {
+                right: 0;
+            }
+        }
+        &__menu {
+            border-bottom: 1px solid $secondaryLight;
+            padding: 10px 0;
+            background: $secondary;
+            > li, > li a {
+                width: 100%;
+                display: block;
+                text-align: right;
+            }
+            > li a {
+                padding: 10px 20px;
+                color: $text;
+            }
+        }
+        &__social {
+            padding: 20px;
+            border-bottom: 1px solid $secondaryLight;
+            .c-socialList {
+                justify-content: flex-end;
+            }
+        }
+        &__cta {
+            padding: 20px;
+            .c-btn,
+            .c-btnWithIcon {
+                max-width: 100%;
+            }
+        }
+        
+        &__showOnlyInResponsive {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 45px;
+            flex: 1 1 auto;
+            .l-nav__cta {
+                padding: 0;
+            }
+        }
+    
+        &__maskMenu.maskAll,
+        &__maskMenu.maskMenu {
+            background: rgba(0,0,0,0.75);
+            &.maskMenu {
+                display: none;
+            }
+        }
+        
+        .c-hamburguer {
+            display: block;
+            &.is-active {
+                margin-top: -25px;
+                right: 270px;
+            }
+        }
+        
+        .c-subMenu {
+            .c-subMenu__mask {
+                display: none !important;
+            }
+            > .c-subMenu__call {
+                text-align: right;
+                padding-right: 45px;
+                &:after {
+                    @include transforms(translateY(50%), center);
+                    left: inherit;
+                    right: 20px;
+                    bottom: 50%;
+                }
+            }
+            > .c-subMenu__content {
+                overflow-y: hidden;
+                max-height: 0;
+                position: relative;
+                top: 0;
+                padding: 0 10px;
+            }
+            
+            &.is-active {
+                > .c-subMenu__call {
+                    &:after {
+                        @include transforms(translateY(50%) rotate(180deg), center);
+                    }
+                }
+                > .c-subMenu__content {
+                    overflow-y: auto;
+                    top: 0;
+                    padding: 10px;
+                    max-height: 2500px;
+                }
+            }
+            
+            .c-subMenu {
+                .c-subMenu__call {
+                    padding-right: 35px;
+                    &:after {
+                        right: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 380px) {
+    .l-nav {
+        padding: 30px 0;
+        &__brand {
+            @include flexWidth(75px);
+        }
+        &__showOnlyInResponsive {
+            .c-mainCTA {
+                .c-btnWithIcon {
+                    padding: 0 15px;
+                    height: 36px;
+                    line-height: 36px;
+                    min-width: 110px;
+                    i {
+                        @include flexWidth(20px);
+                        height: 36px;
+                        svg {
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+                    span {
+                        height: 17px;
+                        line-height: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// l-headerHome
+@media screen and (max-width: 1430px) {
+    .l-headerHome {
+        &:before {
+            width: 470px;
+            height: 200px;
+        }
+    }
+}
+@media screen and (max-width: 1200px) {
+    .l-headerHome {
+        &:before {
+            width: 350px;
+            height: 300px;
+        }
+    }
+}
+@media screen and (max-width: 880px) {
+    .l-headerHome {
+        &__r {
+            left: -80px;
+            img {
+                right: 0;
+            }
+        }
+        &__hand {
+            display: none;
+        }
+        .productPkg {
+            img {
+                position: relative;
+                left: -20px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 770px) {
+    .l-headerHome {
+        background-size: 100%;
+        background-position: top;
+        background-color: #100b06;
+        &__container {
+            display: block;
+            width: 100%;
+        }
+        &__l {
+            padding-top: 100px;
+            width: 100%;
+            max-width: 480px;
+            min-width: 0;
+            margin: 0 auto;
+        }
+        &__r {
+            @include flexWidth(100%);
+            left: 0;
+            margin-top: -150px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            position: relative;
+            &:before {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 400px;
+                position: absolute;
+                top: -50px;
+                left: 0;
+                background: $secondary;
+                background: linear-gradient(180deg, #100b06 0%, rgba(0,0,0,0) 100%);
+                z-index: 2;
+            }
+            img {
+                top: -100px;
+                max-width: 100%;
+                z-index: 1;
+            }
+        }
+        h1, p {
+            text-align: center;
+        }
+        .c-defaultIconBox {
+            justify-content: center;
+            div {
+                flex: 0 1 auto;
+            }
+        }
+        .c-mainCTA {
+            .c-btnWithIcon {
+                margin: 0 auto;
+            }
+        }
+        .productPkg {
+            display: none;
+        }
+    }
+}
+@media screen and (max-width: 460px) {
+    .l-headerHome__r {
+        overflow: hidden;
+        img {
+            top: -190px;
+        }
+    }
+}
+@media screen and (max-width: 410px) {
+    .l-headerHome {
+        &__diagBottom {
+            bottom: -365px;
+        }
+        &__r {
+            justify-content: center;
+            img {
+                top: -100px;
+                max-width: 90%;
+                margin: 0 auto;
+            }
+        }
+        h1 span {
+            font-size: 36px;
+        }
+        .c-responsiveGrid {
+            margin: 30px 0;
+            li {
+                padding: 5px;
+            }
+        }
+    }
+}
+
+// main
+@media screen and (max-width: 770px) {
+    main {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+// s-fixedBUY
+@media screen and (max-width: 770px) {
+    .s-fixedBuy {
+        display: none;
+    }
+}
+
+// l-contentEnd
+@media screen and (max-width: 770px) {
+    .l-contentEnd {
+        order: 11;
+    }
+}
+
+// s-default
+@media screen and (max-width: 770px) {
+    .s-default {
+        @include flexWidth(100%);
+        .u-container {
+            max-width: 530px;
+        }
+        &__lateralContent {
+            width: 100%;
+            float: none;
+        }
+    }
+}
+
+// s-copyright
+@media screen and (max-width: 770px) {
+    .s-copyright {
+        order: 12;
+        p {
+            text-align: center;
+        }
+    }
+}
+
+// .s-atributes 
+@media screen and (max-width: 770px) {
+    .s-atributes {
+        order: 1;
+        &:before {
+            top: 630px;
+        }
+        .u-container {
+            top: -500px;
+        }
+        .productPkg {
+            display: block !important;
+            margin-bottom: 50px;
+            img {
+                max-width: 100%;
+                width: 400px;
+                display: block;
+            }
+        }
+    }
+}
+@media screen and (max-width: 480px) {
+    .s-atributes .productPkg img {
+        position: relative;
+        left: -30px;
+    }
+}
+@media screen and (max-width: 440px) {
+    .s-atributes {
+        &:before {
+            top: 500px;
+        }
+    }
+}
+@media screen and (max-width: 410px) {
+    .s-atributes .productPkg {
+        padding-top: 90px;
+        img {
+            width: 300px;
+            margin: 0 auto;
+        }
+    }
+}
+
+// s-productView {
+@media screen and (max-width: 770px) {
+    .s-productView {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
+
+// productAnimation
+@media screen and (max-width: 1100px) {
+    .c-productAnimation img {
+        left: -165px;
+    }
+}
+@media screen and (max-width: 970px) {
+    .c-productAnimation {
+        height: 445px;
+    }
+}
+@media screen and (max-width: 880px) {
+    .c-productAnimation__claim {
+        font-size: 12px;
+        &.--b {
+            top: 135px;
+        }
+        &.--c {
+            top: 190px;
+        }
+        &.--d {
+            top: 245px;
+        }
+    }
+}
+@media screen and (max-width: 770px) {
+    .c-productAnimation img {
+        left: -115px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .c-productAnimation {
+        height: 400px;
+        img {
+            left: -105px;
+        }
+    }
+}
+@media screen and (max-width: 440px) {
+    .c-productAnimation {
+        height: 370px;
+        top: -40px;
+        img {
+            top: 40px;
+            left: -165px;
+        }
+    }
+}
+
+// s-benefits
+@media screen and (max-width: 770px) {
+    .s-benefits {
+        padding-top: 40px;
+    }
+}
+
+// l-footer
+@media screen and (max-width: 480px) {
+    .l-footer .productPkg img {
+        position: relative;
+        left: -30px;
+    }
+}
+
+// m-modalBuy
+@media screen and (max-width: 700px) {
+    .m-modalBuy {
+        .c-simpleForm li {
+            flex: 1 1 100% !important;
+            max-width: 100% !important;
+            min-width: 100% !important;
+            width: 100% !important;
+        }
+    }
+}
+@media screen and (max-width: 440px) {
+    .m-modalBuy {
+        padding: 60px 20px 60px 20px;
+    }
+}

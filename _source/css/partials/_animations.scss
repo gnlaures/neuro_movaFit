@@ -1,0 +1,16 @@
+// Exemple:
+// use mixin
+ @include keyframes(pulse) {
+	 0% {@include transforms(scale(1), center);}
+	 100% {@include transforms(scale(1.04), center);}
+ }
+ @mixin animation__pulse() {
+ 	animation-name: pulse;
+ 	animation-duration: 1s;
+ 	animation-iteration-count: infinite;
+ 	animation-direction: alternate;
+ 	animation-timing-function: ease;
+ 	animation-play-state: running;
+ 	//animation-fill-mode: forwards;
+ 	//animation-delay: 2s;
+ }
